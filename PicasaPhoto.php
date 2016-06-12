@@ -23,8 +23,10 @@ class PicasaPhoto
 
 	public function getImageURL($size = null)
 	{
-		if ($size == null) {
-			$size = $this->width > $this->height ? $this->width : $this->height;
+		if ($this->width > $this->height) {
+			$size = $size? number_format(($size/$this->height)*$this->width) : $this->width;
+		} else {
+			$size = $size? number_format(($size/$this->width)*$this->height) : $this->height;
 		}
 		$url_parts = explode('/', $this->url);
 		array_splice($url_parts, count($url_parts) - 1, 0, 's' . $size);
