@@ -10,8 +10,8 @@
  * License URI: http://www.wtfpl.net/txt/copying/
  */
 
-include_once "picasa.php";
-include_once "PicasaPhoto.php";
+require_once "picasa.php";
+require_once "PicasaPhoto.php";
 
 function mp_ssv_photo_test($content)
 {
