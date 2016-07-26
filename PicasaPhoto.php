@@ -21,6 +21,11 @@ class PicasaPhoto
 		$this->url = $url;
 	}
 
+    public function getImage($size = null)
+    {
+        return '<img src="' . $this->getImageURL($size) . '" alt="' . $this->title . '"/>';
+    }
+
 	public function getImageURL($size = null)
 	{
 		if ($this->width > $this->height) {
@@ -34,11 +39,6 @@ class PicasaPhoto
 		return $url;
 	}
 
-	public function getImage($size = null)
-	{
-		return '<img src="' . $this->getImageURL($size) . '" alt="' . $this->title . '"/>';
-	}
-
 	public function getThumb($size)
 	{
 		ob_start();
@@ -48,8 +48,7 @@ class PicasaPhoto
 			     width: <?php echo $size; ?>;
 			     height: <?php echo $size; ?>;
 			     padding: 5px;
-			     background-image: url(<?php echo $this->getImageURL($size); ?>);
-			     background-position: center;
+                 background: url(<?php echo $this->getImageURL($size); ?>);
 			     background-size: cover;
 			     "
 		></div>

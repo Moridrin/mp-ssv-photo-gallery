@@ -33,6 +33,7 @@ function mp_ssv_photo_test($content)
 		$album = picasa::getImages($user_id, $album_id, $key);
 		ob_start();
 		foreach ($album as $photo) {
+            /* @var $photo PicasaPhoto */
 			?>
 			<a href="<?php echo $photo->getImageURL(); ?>" class="fancybox-thumb" rel="fancybox-thumb" title="<?php echo $photo->title; ?>">
 				<?php echo $photo->getThumb($size); ?>
