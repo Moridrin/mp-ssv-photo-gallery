@@ -74,31 +74,32 @@ function mp_ssv_fancybox()
 
 add_action('wp_head', 'mp_ssv_fancybox');
 
-wp_enqueue_script("jquery");
+//wp_enqueue_script doesn't work for some reason (fix if plugin is wanted).
+//wp_enqueue_script("jquery");
 
 //Thumbs Style
-wp_enqueue_style("mpssv.thumbs", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/thumbs.css", false);
+//wp_enqueue_style("mpssv.thumbs", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/thumbs.css", false);
 
 //FancyBox Main Style
-wp_enqueue_style("jquery.fancybox", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/jquery.fancybox.css", false, "2.1.5");
+//wp_enqueue_style("jquery.fancybox", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/jquery.fancybox.css", false, "2.1.5");
 
 //FancyBox Helpers Buttons Style
-wp_enqueue_style("jquery.fancyboxbuttons", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-buttons.css", false, "2.1.5");
+//wp_enqueue_style("jquery.fancyboxbuttons", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-buttons.css", false, "2.1.5");
 
 //FancyBox Helpers Thumbs Style
-wp_enqueue_style("jquery.fancyboxthumbs", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-thumbs.css", false, "2.1.5");
+//wp_enqueue_style("jquery.fancyboxthumbs", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-thumbs.css", false, "2.1.5");
 
 //FancyBox Main Pack
-wp_enqueue_script("jquery.fancybox", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/jquery.fancybox.pack.js", array("jquery"), "2.1.5", 1);
+//wp_enqueue_script("jquery.fancybox", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/jquery.fancybox.pack.js", array("jquery"), "2.1.5", 1);
 
 //FancyBox Lib Mousewheel
-wp_enqueue_script("jquery.fancyboxmousewheel", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/lib/jquery.mousewheel-3.0.6.pack.js", "3.0.6", 1);
+//wp_enqueue_script("jquery.fancyboxmousewheel", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/lib/jquery.mousewheel-3.0.6.pack.js", "3.0.6", 1);
 
 //FancyBox Helpers Buttons
-wp_enqueue_script("jquery.fancyboxbuttons", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-buttons.js", array("jquery"), "1.0.6", 1);
+//wp_enqueue_script("jquery.fancyboxbuttons", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-buttons.js", array("jquery"), "1.0.6", 1);
 
 //FancyBox Helpers Media
-wp_enqueue_script("jquery.fancyboxmedia", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-media.js", array("jquery"), "1.0.6", 1);
+//wp_enqueue_script("jquery.fancyboxmedia", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-media.js", array("jquery"), "1.0.6", 1);
 
 //FancyBox helpers Thumbs
-wp_enqueue_script("jquery.fancyboxthumbs", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-thumbs.js", array("jquery"), "1.0.6", 1);
+//wp_enqueue_script("jquery.fancyboxthumbs", WP_PLUGIN_URL . "/mp-ssv-photo-gallery/include/FancyBox/source/helpers/jquery.fancybox-thumbs.js", array("jquery"), "1.0.6", 1);
